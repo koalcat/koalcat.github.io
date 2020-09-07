@@ -1,0 +1,87 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.h3 {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.s1 {
+  span {
+    font-size: 30px;
+  }
+
+  blockquote {
+    margin: 0;
+
+    a {
+      color: #f6f7ec;
+      text-decoration: underline;
+    }
+  }
+
+  blockquote::before {
+    content: '“';
+    font-size: 50px;
+    position: relative;
+    font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  }
+
+  blockquote::after {
+    content: '”';
+    font-size: 50px;
+    position: relative;
+    top: 45px;
+    font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  }
+}
+
+.snapshots {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  min-height: 700px;
+  background: white;
+
+  .snapshot {
+    width: 320px;
+    border: 10px gray solid;
+    border-radius: 40px;
+  }
+
+  .snapshot1 {
+    position: relative;
+    top: 30px;
+    right: -25px;
+  }
+
+  .snapshot2 {
+    position: relative;
+    top: -30px;
+    right: 25px;
+    z-index: 1;
+  }
+}
+
+.node-enter {
+  opacity: 0;
+}
+
+.node-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.node-exit {
+  opacity: 1;
+}
+
+.node-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
