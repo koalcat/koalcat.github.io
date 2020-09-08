@@ -77,8 +77,8 @@ const App: React.FC<AppProps> = (props: AppProps) => {
           }}
         >
         <div className={styles.snapshots}>
-          <Phone type='iphone' screen={dark ? snapshots.dark[sceenshot] : snapshots.light[sceenshot] } style={{margin: '10px'}}/>
-          <Phone type='android' screen={dark ? androidSnapshots.light[1 - sceenshot] : androidSnapshots.dark[1 - sceenshot]} style={{margin: '10px'}}/>
+          <Phone type='iphone' screen={dark ? snapshots.dark[sceenshot] : snapshots.light[sceenshot] } className={styles.phone}/>
+          <Phone type='android' screen={dark ? androidSnapshots.light[1 - sceenshot] : androidSnapshots.dark[1 - sceenshot]} className={styles.phone}/>
         </div>
       </CSSTransition>
       <Footer />

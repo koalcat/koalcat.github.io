@@ -1,8 +1,14 @@
+@import '../vars.less';
+
 .marvel-device {
   display: inline-block;
   position: relative;
   box-sizing: content-box !important;
   transform: scale(0.9);
+
+  @media (max-width: @xs) {
+    transform: scale(0.7);
+  }
 
   .screen {
     width: 100%;

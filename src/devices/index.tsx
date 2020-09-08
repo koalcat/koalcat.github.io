@@ -5,13 +5,14 @@ interface PhoneProps {
   type: 'iphone' | 'android';
   screen?: string;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 const Phone: React.FC<PhoneProps> = (props: PhoneProps) => {
   switch (props.type) {
     case 'iphone':
       return (
-        <div className={`${styles['marvel-device']} ${styles['iphone-x']}`} style={props.style}>
+        <div className={`${styles['marvel-device']} ${styles['iphone-x']} ${props.className? props.className : ''}`} style={props.style}>
           <div className={styles.notch}>
             <div className={styles.camera}></div>
             <div className={styles.speaker}></div>
@@ -34,7 +35,7 @@ const Phone: React.FC<PhoneProps> = (props: PhoneProps) => {
       );
     default:
       return (
-        <div className={`${styles['marvel-device']} ${styles.note8}`} style={props.style}>
+        <div className={`${styles['marvel-device']} ${styles.note8} ${props.className? props.className : ''}`} style={props.style}>
           <div className={styles.inner}></div>
           <div className={styles.overflow}>
             <div className={styles.shadow}></div>
