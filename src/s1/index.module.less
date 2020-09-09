@@ -1,22 +1,48 @@
 @import '../vars.less';
-.logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 15px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-}
 
-.h3 {
-  margin-top: 0px;
-  font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 30px;
-}
+@Blink-Color: #edfa00;
 
 .s1 {
-  span {
-    font-size: 30px;
+  padding: 200px 0;
+  display: flex;
+  align-items: center;
 
+  @media (max-width: @xs) {
+    flex-direction: column;
+  }
+
+  .logoWarap {
+    margin-right: 80px;
+
+    @media (max-width: @xs) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    border: #f1f1f1 2px solid;
+    //box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .h3 {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    color: #fff;
+  }
+
+  font-size: 30px;
+
+  @media (max-width: @xs) {
+    font-size: 22px;
+  }
+
+  span {
     font {
       animation: blinking 5s infinite;
     }
@@ -26,6 +52,7 @@
     margin: 0;
     animation: blinking 5s infinite;
     a {
+      line-height: 30px;
       color: #f6f7ec;
       text-decoration: underline;
       animation: blinking 5s infinite;
@@ -52,7 +79,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
   min-height: 700px;
-  background: white;
+  background: #f6f7ec;
   overflow: hidden;
 
   @media (max-width: @xs) {
@@ -121,18 +148,18 @@
 
 @keyframes blinking {
   10% {
-    color: #edfa00;
-    text-shadow: 0 0 15px #edfa00;
+    color: @Blink-Color;
+    text-shadow: 0 0 15px @Blink-Color;
     font-weight: bold;
   }
   50% {
-    color: #edfa00;
-    text-shadow: 0 0 15px #edfa00;
+    color: @Blink-Color;
+    text-shadow: 0 0 15px @Blink-Color;
     font-weight: bold;
   }
   100% {
-    color: #000;
-    text-shadow: none;
+    color: #202020;
+    text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
     font-weight: bold;
   }
 }
@@ -141,15 +168,21 @@
   padding: 20px 30px;
   border-radius: 15px;
   color: #202020;
-  background-color: #2d2d2d;
+  background-color: #1a1a1a;
   letter-spacing: 0.1em;
   text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  //box-shadow: 0 0 150px @Blink-Color;
+  font-weight: bold;
   //box-shadow: 0 0 1px #b3ff51, 0 0 2px #b3ff51, 0 0 6px #b3ff51, 0 0 12px #b3ff51,
   //  inset 0 0 1px #b3ff51, inset 0 0 2px #b3ff51, inset 0 0 6px #b3ff51, inset 0 0 12px #b3ff51;
+
+  @media (max-width: @xs) {
+    padding: 20px 5px;
+  }
 }
 
 .phone {
-  margin: 10px;
+  margin: 20px;
   @media (max-width: @xs) {
     margin: 0;
   }

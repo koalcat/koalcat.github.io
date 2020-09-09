@@ -5,6 +5,7 @@ import '../App.css';
 import { clearInterval } from 'timers';
 import { CSSTransition } from 'react-transition-group';
 import Phone from '../devices';
+import Header from '../header';
 import Footer from '../footer';
 
 const duration = 300;
@@ -58,9 +59,12 @@ const App: React.FC<AppProps> = (props: AppProps) => {
   return (
     <>
       <header className="App-header">
+        <Header />
         <div className={styles.s1}>
-          <img src={icon} alt="logo" className={styles.logo} />
-          <h3 className={styles.h3}>{info.name}</h3>
+          <div className={styles.logoWarap}>
+            <img src={icon} alt="logo" className={styles.logo} />
+            <h3 className={styles.h3}>{info.name}</h3>
+          </div>
           <div className={styles.box}>
             <div dangerouslySetInnerHTML={{ __html: info.description }} />
           </div>
@@ -77,7 +81,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
           }}
         >
         <div className={styles.snapshots}>
-          <Phone type='iphone' screen={dark ? snapshots.dark[sceenshot] : snapshots.light[sceenshot] } className={styles.phone}/>
+          <Phone type='iphone' screen={dark ? snapshots.dark[1 - sceenshot] : snapshots.light[1 - sceenshot] } className={styles.phone}/>
           <Phone type='android' screen={dark ? androidSnapshots.light[1 - sceenshot] : androidSnapshots.dark[1 - sceenshot]} className={styles.phone}/>
         </div>
       </CSSTransition>
