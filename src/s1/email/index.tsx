@@ -82,7 +82,7 @@ const CollectionEmail: React.FC = (props: EmailProps) => {
             onChange={onChange}
           />
           <button disabled={loading} className={styles.submit} type="submit" value="Submit">
-            确定
+            👌
           </button>
         </form>
       </div>

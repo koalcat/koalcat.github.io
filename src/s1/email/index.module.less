@@ -7,7 +7,7 @@
   text-align: left;
 
   @media (max-width: @xs) {
-    width: 320px;
+    width: 340px;
     height: 40px;
   }
 
@@ -24,7 +24,7 @@
 
 .box {
   border-radius: 10px;
-  border-bottom-right-radius: 40px;
+  //border-bottom-right-radius: 40px;
   color: #fff;
   background-color: #292929;
   letter-spacing: 0.1em;
@@ -47,7 +47,7 @@
       outline: none;
 
       @media (max-width: @xs) {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
 
@@ -58,15 +58,16 @@
       border: 0;
       outline: none;
       color: @Blink-Color;
-      text-shadow: 0 0 15px @Blink-Color;
+      text-shadow: 0 0 1px @Blink-Color;
       font-weight: bold;
 
       @media (max-width: @xs) {
-        font-size: 22px;
-        padding: 0 10px;
+        font-size: 18px;
+        padding: 0 5px;
+        min-width: 50px;
       }
 
-      &:hover {
+      &:active {
         text-shadow: 0 0 50px @Blink-Color;
       }
     }
