@@ -1,9 +1,7 @@
 @import '../vars.less';
 
-@Blink-Color: #edfa00;
-
 .s1 {
-  padding: 200px 0;
+  padding: 200px 0 40px 0;
   display: flex;
   align-items: center;
 
@@ -12,7 +10,7 @@
   }
 
   .logoWarap {
-    margin-right: 80px;
+    margin-right: 60px;
 
     @media (max-width: @xs) {
       margin-right: 0;
@@ -39,7 +37,7 @@
   font-size: 30px;
 
   @media (max-width: @xs) {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   span {
@@ -165,16 +163,20 @@
 }
 
 .box {
-  padding: 20px 30px;
-  border-radius: 15px;
+  padding: 15px 30px 20px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 10px;
   color: #202020;
-  background-color: #1a1a1a;
+  background-color: #292929;
   letter-spacing: 0.1em;
-  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
-  //box-shadow: 0 0 150px @Blink-Color;
+  text-shadow: -1px -1px 1px #111, 1px 2px 5px #363636;
   font-weight: bold;
   //box-shadow: 0 0 1px #b3ff51, 0 0 2px #b3ff51, 0 0 6px #b3ff51, 0 0 12px #b3ff51,
   //  inset 0 0 1px #b3ff51, inset 0 0 2px #b3ff51, inset 0 0 6px #b3ff51, inset 0 0 12px #b3ff51;
+  //border: #30efe6 1px solid;
+  box-shadow: 0 0 5px #30efe6, 0 0 10px @Blink-Color;
 
   @media (max-width: @xs) {
     padding: 20px 5px;

@@ -7,20 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 import Phone from '../devices';
 import Header from '../header';
 import Footer from '../footer';
-
-const duration = 300;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-};
-
-const transitionStyles = {
-  entering: { opacity: 1 },
-  entered: { opacity: 1 },
-  exiting: { opacity: 0 },
-  exited: { opacity: 0 },
-};
+import Collection from './email';
 
 const icon = require('./Icon-App-76x76@2x.png');
 const snapshots = {
@@ -69,6 +56,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
             <div dangerouslySetInnerHTML={{ __html: info.description }} />
           </div>
         </div>
+        <Collection />
       </header>
       <CSSTransition
           in={true}

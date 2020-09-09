@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a8bba99.chunk.css",
-    "main.js": "/static/js/main.d0610f07.chunk.js",
-    "main.js.map": "/static/js/main.d0610f07.chunk.js.map",
+    "main.css": "/static/css/main.d4e3fcf7.chunk.css",
+    "main.js": "/static/js/main.bcf5d224.chunk.js",
+    "main.js.map": "/static/js/main.bcf5d224.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.933364b2.js",
     "runtime-main.js.map": "/static/js/runtime-main.933364b2.js.map",
-    "static/js/2.b9c0ffd8.chunk.js": "/static/js/2.b9c0ffd8.chunk.js",
-    "static/js/2.b9c0ffd8.chunk.js.map": "/static/js/2.b9c0ffd8.chunk.js.map",
+    "static/js/2.9301c77a.chunk.js": "/static/js/2.9301c77a.chunk.js",
+    "static/js/2.9301c77a.chunk.js.map": "/static/js/2.9301c77a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.687b1fc302ff0c350cff67045c5ca4ec.js": "/precache-manifest.687b1fc302ff0c350cff67045c5ca4ec.js",
+    "precache-manifest.2faabcb130ce59cd5c5870d5d7b3b601.js": "/precache-manifest.2faabcb130ce59cd5c5870d5d7b3b601.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.2a8bba99.chunk.css.map": "/static/css/main.2a8bba99.chunk.css.map",
-    "static/js/2.b9c0ffd8.chunk.js.LICENSE.txt": "/static/js/2.b9c0ffd8.chunk.js.LICENSE.txt",
+    "static/css/main.d4e3fcf7.chunk.css.map": "/static/css/main.d4e3fcf7.chunk.css.map",
+    "static/js/2.9301c77a.chunk.js.LICENSE.txt": "/static/js/2.9301c77a.chunk.js.LICENSE.txt",
     "static/media/snapshot1.png": "/static/media/snapshot1.e6467ee7.png",
     "static/media/snapshot1a.png": "/static/media/snapshot1a.09d0a79a.png",
     "static/media/snapshot2.png": "/static/media/snapshot2.1335d281.png",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.933364b2.js",
-    "static/js/2.b9c0ffd8.chunk.js",
-    "static/css/main.2a8bba99.chunk.css",
-    "static/js/main.d0610f07.chunk.js"
+    "static/js/2.9301c77a.chunk.js",
+    "static/css/main.d4e3fcf7.chunk.css",
+    "static/js/main.bcf5d224.chunk.js"
   ]
 }
