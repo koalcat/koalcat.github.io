@@ -3,12 +3,12 @@ import styles from './index.module.less';
 
 interface HeaderProps {}
 
-const logo = '(🐨, 😺) => \'koalcat\';';
+const logo = '(🐨, 😺) => koalcat;';
 
 const Header: React.FC<HeaderProps> = () => {
   return (
     <div className={`${styles.header} ${styles.deepshadow}`}>
-        <span>{logo}</span>
+        <div className={styles.logo}><span>{logo}</span></div>
     </div>
   );
 };

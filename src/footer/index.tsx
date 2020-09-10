@@ -3,13 +3,11 @@ import styles from './index.module.less';
 
 interface FooterProps {}
 
-const copyright = `©${new Date().getFullYear()} koalcat`;
-
 const Footer: React.FC<FooterProps> = () => {
   return (
     <div className={`${styles['typewriter-root']} ${styles.retroshadow}`}>
       <div className={`${styles.footer} ${styles.typewriter}`}>
-        <span>{copyright}</span>
+        <span>{`Copyright © ${new Date().getFullYear()} `}<a href="mailto:xuchdeid@gmail.com">koalcat</a>. All Rights Reserved.</span>
       </div>
     </div>
   );
