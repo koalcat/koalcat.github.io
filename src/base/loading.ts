@@ -11,7 +11,7 @@ export const useIsMounted = (): (() => boolean) => {
     return useCallback(() => ref.current, []);
 };
 
-export const useFetch: (action: (args: any) => Promise<any>) => [boolean, (args: any) => Promise<any>] = (
+export const useFetch: (action: (args?: any) => Promise<any>) => [boolean, (args?: any) => Promise<any>] = (
     action: (args: any) => Promise<any>,
   ) => {
     const [isLoading, setLoading] = useState(false);

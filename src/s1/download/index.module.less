@@ -1,0 +1,57 @@
+@import '../../vars.less';
+
+.root {
+  width: 666px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+
+  @media (max-width: @xs) {
+    width: 340px;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+}
+
+.box {
+  flex: 1;
+  justify-content: center;
+}
+
+.android {
+  display: block;
+  flex: 1;
+  height: 80px;
+  min-width: 200px;
+  background-image: url('../android-app.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: @xs) {
+    width: 100%;
+    margin-bottom: 50px;
+    flex: none;
+  }
+}
+
+.ios {
+  display: block;
+  flex: 1;
+  height: 80px;
+  min-width: 200px;
+  background-image: url('../app-store.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: @xs) {
+    width: 100%;
+    margin-bottom: 0;
+    flex: none;
+  }
+}

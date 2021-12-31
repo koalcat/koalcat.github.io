@@ -8,6 +8,7 @@ import Phone from '../devices';
 import Header from '../header';
 import Footer from '../footer';
 import Collection from './email';
+import Download from './download';
 
 const icon = require('./Icon-App-76x76@2x.png');
 const snapshots = {
@@ -56,6 +57,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
             <div dangerouslySetInnerHTML={{ __html: info.description }} />
           </div>
         </div>
+        <Download />
         <Collection />
       </header>
       <CSSTransition
