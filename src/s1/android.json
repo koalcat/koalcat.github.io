@@ -1,14 +1,14 @@
 {
     "size": "16.32MB",
     "enable": 1,
-    "versionInt": "36",
+    "versionInt": "37",
     "isAutoInstall": 0,
     "name": "S1Fun(\u5b89\u5353)",
-    "url": "https://s1fun.koalcat.com/app/s1fun-0.16.0-build36.apk",
-    "version": "0.16.0 build(36)",
-    "time": "2022-02-28",
+    "url": "https://s1fun.koalcat.com/app/s1fun-0.17.0-build37.apk",
+    "version": "0.17.0 build(37)",
+    "time": "2022-04-08",
     "tips": "",
     "icon": "app/icon.png",
     "type": "appStore",
-    "notice": "- 支持帖子内跳转到指定回复\n- 我的通知里可以跳到具体的回复\n- 升级框架，修复bug"
+    "notice": "- 紧急修复头像加载失败问题"
 }
