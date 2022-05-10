@@ -1,14 +1,14 @@
 {
-    "size": "16.32MB",
-    "enable": 1,
-    "versionInt": "37",
-    "isAutoInstall": 0,
-    "name": "S1Fun(\u5b89\u5353)",
-    "url": "https://s1fun.koalcat.com/app/s1fun-0.17.0-build37.apk",
-    "version": "0.17.0 build(37)",
-    "time": "2022-04-08",
-    "tips": "",
-    "icon": "app/icon.png",
-    "type": "appStore",
-    "notice": "- 紧急修复头像加载失败问题"
+  "size": "16.32MB",
+  "enable": 1,
+  "versionInt": "38",
+  "isAutoInstall": 0,
+  "name": "S1Fun(\u5b89\u5353)",
+  "url": "https://s1fun.koalcat.com/app/s1fun-0.18.0-build38.apk",
+  "version": "0.18.0 build(38)",
+  "time": "2022-05-09",
+  "tips": "",
+  "notice": "- 新增提示发帖失败原因\n- 新增自动过滤帖子中过多回车，可以在‘帖子排版’中设置\n- 优化ui流畅度",
+  "icon": "app/icon.png",
+  "type": "appStore"
 }
