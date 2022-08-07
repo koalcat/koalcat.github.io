@@ -1,14 +1,13 @@
 {
   "size": "16.32MB",
   "enable": 1,
-  "versionInt": "40",
+  "versionInt": "41",
   "isAutoInstall": 0,
   "name": "S1Fun(\u5b89\u5353)",
-  "url": "https://s1fun.koalcat.com/app/s1fun-0.19.0-build40.apk",
-  "version": "0.19.0 build(40)",
-  "time": "2022-05-27",
+  "url": "https://s1fun.koalcat.com/app/s1fun-0.20.0-build41.apk",
+  "version": "0.40.0 build(41)",
+  "time": "2022-08-07",
   "tips": "",
-  "notice": "- 新增锁定屏幕自动旋转功能\n- 修复ui交互bug\n- 优化横屏模式\n- 修复bug",
   "icon": "app/icon.png",
   "type": "appStore"
 }
