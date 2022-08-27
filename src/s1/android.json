@@ -1,13 +1,14 @@
 {
   "size": "16.32MB",
   "enable": 1,
-  "versionInt": "41",
+  "versionInt": "50",
   "isAutoInstall": 0,
   "name": "S1Fun(\u5b89\u5353)",
-  "url": "https://s1fun.koalcat.com/app/s1fun-0.20.0-build41.apk",
-  "version": "0.40.0 build(41)",
-  "time": "2022-08-07",
+  "url": "https://s1fun.koalcat.com/app/s1fun-1.0.0-build50.apk",
+  "version": "1.0.0 build(50)",
+  "time": "2022-08-28",
   "tips": "",
+  "notice": "- 新增在帖子显示用户鹅数功能\n- 在 设置-额外信息 中开启",
   "icon": "app/icon.png",
   "type": "appStore"
 }
