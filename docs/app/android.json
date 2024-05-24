@@ -1,14 +1,14 @@
 {
   "size": "16.32MB",
   "enable": 1,
-  "versionInt": "52",
+  "versionInt": "58",
   "isAutoInstall": 0,
   "name": "S1Fun(\u5b89\u5353)",
-  "url": "https://s1fun.koalcat.com/app/s1fun-1.1.0-build52.apk",
-  "version": "1.1.0 build(52)",
-  "time": "2022-09-25",
+  "url": "https://s1fun.koalcat.com/app/s1fun-1.5.0-build58.apk",
+  "version": "1.5.0 build(58)",
+  "time": "2024-05-24",
   "tips": "",
-  "notice": "- 帖子页码指示器手势\n   1. 单击弹出页码列表\n   2. 双击刷新当前页面数据\n   3. 长按回到顶部\n- 优化刷新逻辑",
+  "notice": "- 支持论坛升级后的api\n- 头像显示\n- 用户帖子列表，回复，通知，收藏\n- 搜索功能\n- 小黑屋",
   "icon": "app/icon.png",
   "type": "appStore"
 }
