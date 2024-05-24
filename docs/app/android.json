@@ -1,14 +1,14 @@
 {
   "size": "16.32MB",
   "enable": 1,
-  "versionInt": "57",
+  "versionInt": "58",
   "isAutoInstall": 0,
   "name": "S1Fun(\u5b89\u5353)",
-  "url": "https://s1fun.koalcat.com/app/s1fun-1.4.0-build57.apk",
-  "version": "1.4.0 build(57)",
-  "time": "2024-02-08",
+  "url": "https://s1fun.koalcat.com/app/s1fun-1.5.0-build58.apk",
+  "version": "1.5.0 build(58)",
+  "time": "2024-05-24",
   "tips": "",
-  "notice": "- 尝试修复由帖子回复数不正确导致无法翻页的bug",
+  "notice": "- 支持论坛升级后的api\n- 头像显示\n- 用户帖子列表，回复，通知，收藏\n- 搜索功能\n- 小黑屋",
   "icon": "app/icon.png",
   "type": "appStore"
 }
