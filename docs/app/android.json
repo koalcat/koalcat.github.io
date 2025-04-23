@@ -1,14 +1,14 @@
 {
   "size": "16.32MB",
   "enable": 1,
-  "versionInt": "60",
+  "versionInt": "61",
   "isAutoInstall": 0,
   "name": "S1Fun(\u5b89\u5353)",
-  "url": "https://s1fun.koalcat.com/app/s1fun-1.7.0-build60.apk",
-  "version": "1.7.0 build(60)",
-  "time": "2025-01-14",
+  "url": "https://s1fun.koalcat.com/app/s1fun-1.8.0-build61.apk",
+  "version": "1.8.0 build(61)",
+  "time": "2025-04-23",
   "tips": "",
-  "notice": "- 修复站内图片无法显示的bug",
+  "notice": "- 支持新的域名",
   "icon": "app/icon.png",
   "type": "appStore"
 }
