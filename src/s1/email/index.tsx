@@ -69,7 +69,7 @@ const CollectionEmail: React.FC = (props: EmailProps) => {
   return (
     <div className={styles.root}>
       <span role="img" aria-label="">
-        欢迎反馈👏，你可以在 <a style={{color: 'white'}} href="https://bbs.saraba1st.com/2b/thread-1965537-1-1.html" rel="noopener noreferrer" target="_blank">bbs.saraba1st.com</a> 回帖
+        欢迎反馈👏，你可以在 <a style={{color: 'white'}} href="https://stage1st.com/2b/thread-1965537-1-1.html" rel="noopener noreferrer" target="_blank">stage1st.com</a> 回帖
       </span>
       {/* <div className={styles.box}>
         <form onSubmit={onSubmit}>
