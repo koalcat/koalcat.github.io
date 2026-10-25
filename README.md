@@ -1,44 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# S1Fun 落地页
 
-## Available Scripts
+S1Fun 的静态落地页（Create React App 3.4 + TypeScript + Less）。发布在
+`s1fun.koalcat.com`（Cloudflare Pages）和 `koalcat.github.io`（GitHub Pages，源是 `docs/`）。
 
-In the project directory, you can run:
+## 开发
 
-### `yarn start`
+```bash
+yarn start     # http://localhost:3000，改完自动刷新
+yarn build     # 产物在 build/
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 构建与发布
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```bash
+./build.sh            # 生成 app 元信息 → 构建 → 同步到 docs/
+./build.sh --no-app   # 只构建，跳过元信息生成
+```
 
-### `yarn test`
+`build.sh` 会调用 `scripts/gen-app-info.js`，把「手动改 android.json」这件事自动化：
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 从 S1 仓库（默认 `../S1`，可用 `S1_APP=/path/to/S1` 覆盖）的
+  `android/app/build.gradle` 读 `versionCode` / `versionName`；
+- 从 release APK 取大小和构建日期，拼出下载地址
+  `<base>/s1fun-<versionName>-build<versionCode>.apk`
+  （base 默认 `https://s1fun.koalcat.com/app`，可用 `--base-url` / `APP_BASE_URL` 改）；
+- 同时写两份数据：`src/s1/android.json`（页面读取）和
+  `docs/app/android.json`（App 检查更新读取），两者必须一致；
+- 把 APK 复制到 `docs/app/`。
 
-### `yarn build`
+可选：
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+node scripts/gen-app-info.js --dry-run     # 只打印，不写文件
+node scripts/gen-app-info.js --prune       # 顺手删掉 docs/app 里的旧 APK
+node scripts/gen-app-info.js --app ../S1 --apk path/to/app-release.apk
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+页面上那行「更新说明」从 S1 仓库的 `CHANGELOG.md` 按版本号取，找 `## 2.0.0` 这样的段落，
+把它下面的列表转成 `- xxx` 的多行文本（App 按行渲染）：
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```md
+## 2.0.0 (71)
 
-### `yarn eject`
+- 全新的图片加速，可自选代理
+- 修复图片加载失败
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+找不到对应段落就留空（页面自动隐藏这一行），同一版本重跑会沿用已有文案。
+临时改一两句可以用 `--notice "..."` 覆盖，不会写进 CHANGELOG。
+落地页的规格卡会把这份列表逐条列出来。
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+发布：`docs/` 是 GitHub Pages 的源，push 即生效；`s1fun.koalcat.com` 背后是
+Cloudflare Pages，如果项目是 Direct Upload，需要单独把 `docs/` 传上去。

@@ -1,4 +1,5 @@
 {
   "name": "S1Fun",
-  "description": "<span>又一个<font>S1</font>客户端</span><blockquote cite=\"https://stage1st.com/\"><a target=\"_blank\" class=\"desc\" href=\"https://stage1st.com/\">华语第三动漫论坛，爱撕衣</a></blockquote>"
+  "tagline": "又一个 S1 客户端",
+  "description": "清爽的帖子阅读、离线缓存、深色模式。iOS 和 Android 都能用。"
 }

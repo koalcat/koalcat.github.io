@@ -1,57 +1,83 @@
 @import '../../vars.less';
 
 .root {
-  width: 666px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  text-align: center;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
 
-  @media (max-width: @xs) {
-    width: 340px;
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 20px;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.primary {
+  background: var(--signal);
+  color: var(--ink);
+  box-shadow: 0 16px 34px -20px rgba(217, 247, 92, 0.95);
+
+  &:hover {
+    background: var(--signal-strong);
+    box-shadow: 0 20px 38px -18px rgba(217, 247, 92, 0.9);
+  }
+}
+
+.secondary {
+  color: var(--paper);
+  border: 1px solid var(--hair-strong);
+
+  &:hover {
+    border-color: var(--paper);
+    background: rgba(244, 242, 234, 0.05);
+  }
+}
+
+.glyph {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  margin-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.62;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 576px) {
+  .root {
     flex-direction: column;
-    margin-bottom: 80px;
+    align-items: stretch;
   }
-}
 
-.box {
-  flex: 1;
-  justify-content: center;
-}
-
-.android {
-  display: block;
-  flex: 1;
-  height: 80px;
-  min-width: 200px;
-  background-image: url('../android-app.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (max-width: @xs) {
+  .button {
     width: 100%;
-    margin-bottom: 50px;
-    flex: none;
-  }
-}
-
-.ios {
-  display: block;
-  flex: 1;
-  height: 80px;
-  min-width: 200px;
-  background-image: url('../app-store.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (max-width: @xs) {
-    width: 100%;
-    margin-bottom: 0;
-    flex: none;
   }
 }

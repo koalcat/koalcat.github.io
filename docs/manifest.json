@@ -1,10 +1,12 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "S1Fun",
+  "name": "S1Fun — 又一个 S1 客户端",
+  "description": "给华语第三动漫论坛写的第三方客户端，支持深色模式、离线缓存和动图表情。",
+  "lang": "zh-CN",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "16x16 32x32 48x48 64x64 128x128 256x256",
       "type": "image/x-icon"
     },
     {
@@ -20,6 +22,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a0c0b",
+  "background_color": "#0a0c0b"
 }

@@ -1,76 +1,59 @@
 @import '../../vars.less';
 
 .root {
-  width: 666px;
-  margin-top: 40px;
-  margin-bottom: 200px;
-  text-align: center;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
 
-  @media (max-width: @xs) {
-    width: 340px;
-    margin-top: 20px;
-    margin-bottom: 90px;
-  }
-
-  span {
-    font-size: 30px;
-    color: @Blink-Color;
-    text-shadow: 0 0 15px @Blink-Color;
-
-    @media (max-width: @xs) {
-      font-size: 22px;
-    }
+  @media (max-width: @sm) {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 }
 
-.box {
-  border-radius: 10px;
-  //border-bottom-right-radius: 40px;
-  color: #fff;
-  background-color: #292929;
-  letter-spacing: 0.1em;
-  text-shadow: -1px -1px 1px #111, 1px 2px 5px #363636;
-  font-weight: bold;
-  box-shadow: 0 0 5px #fff, 0 0 200px @Blink-Color;
-  margin-top: 20px;
-  padding: 10px;
+.label {
+  padding-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
 
-  form {
-    display: flex;
-    width: 100%;
+.index {
+  margin-right: 10px;
+  color: var(--muted-ink);
+}
 
-    input {
-      color: #fff;
-      font-size: 30px;
-      background: transparent;
-      border-width: 0;
-      flex: 1;
-      outline: none;
+.body {
+  max-width: 30em;
+}
 
-      @media (max-width: @xs) {
-        font-size: 18px;
-      }
-    }
+.text {
+  font-size: clamp(20px, 2.3vw, 29px);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+}
 
-    .submit {
-      padding: 0 20px;
-      font-size: 32px;
-      background: transparent;
-      border: 0;uy76y7u
-      outline: none;
-      color: @Blink-Color;
-      text-shadow: 0 0 1px @Blink-Color;
-      font-weight: bold;
+// The email is deliberately quieter than the forum link: less prominent, less scraped.
+.aside {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted-ink);
+}
 
-      @media (max-width: @xs) {
-        font-size: 18px;
-        padding: 0 5px;
-        min-width: 50px;
-      }
+.link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--signal);
+  transition: color 0.2s ease, border-color 0.2s ease;
 
-      &:active {
-        text-shadow: 0 0 50px @Blink-Color;
-      }
-    }
+  &:hover {
+    color: var(--signal);
   }
 }
